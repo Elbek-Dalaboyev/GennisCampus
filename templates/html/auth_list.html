@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tables | Gennis Campus</title>
+    <link rel="stylesheet" href="../../static/css/auth_list.css">
+</head>
+<body>
+
+<ul class="ul_location">
+    {% for list in lists %}
+        <li class="li_location">
+            <a href="http://127.0.0.1:5000/auth_list/{{ list.id }}">
+                {{ list.loc }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+
+<div>
+    <form method="post" action="/search/">
+        <input name="search" type="text">
+        <input id="search_res" type="submit" value="Click">
+    </form>
+    <select id="subject" name="subject">
+        <option>English Language</option>
+        <option>Mathematics</option>
+        <option>Russian Language</option>
+        <option>Mother Tongue</option>
+        <option>Biology</option>
+        <option>Chemistry</option>
+        <option>Fizika</option>
+        <option>IELTS</option>
+        <option>CEFR</option>
+    </select>
+    <table id="customers" class="table_1">
+        <tr>
+            <th style="width: 25%">
+                ID
+            </th>
+            <th style="width: 25%">
+                Ism
+            </th>
+            <th style="width: 25%">
+                Familiya
+            </th>
+            <th style="width: 25%">
+                Fan
+            </th>
+        </tr>
+    {% for list in id_list %}
+        <tr>
+            <td style="width: 25%">{{ list.id }}</td>
+            <td style="width: 25%">{{ list.name }}</td>
+            <td style="width: 25%">{{ list.surname }}</td>
+            <td style="width: 25%">{{ list.subject }}</td>
+
+        </tr>
+    {% endfor %}
+
+    </table>
+    <table id="customers" class="table_2">
+    {% for result in res %}
+        <tr>
+            <td style="width: 25%">{{ result.id }}</td>
+            <td style="width: 25%">{{ result.name }}</td>
+            <td style="width: 25%">{{ result.surname }}</td>
+            <td style="width: 25%">{{ result.subject }}</td>
+        </tr>
+
+    {% endfor %}
+    </table>
+    <script src="/static/js/list.js"></script>
+</div>
+</body>
+</html>

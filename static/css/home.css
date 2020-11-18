@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.log-in-button {
+    margin: 20px;
+    background-color: #4381bf;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #dadee3;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.list-button {
+    margin: 20px;
+    background-color: #4381bf;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #dadee3;
+    border-radius: 10px;
+    padding: 5px;
+}
